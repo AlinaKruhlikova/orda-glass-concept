@@ -125,7 +125,7 @@ nav a:hover{color:var(--text)}
 .files{grid-column:1/13;margin-top:var(--s5);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;position:relative}
 .files a{min-height:200px;border-radius:16px;padding:var(--s3);display:flex;flex-direction:column;justify-content:space-between;background:rgba(255,255,255,.07);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);backdrop-filter:blur(16px);transition:background .25s}
 .files a:hover{background:rgba(255,255,255,.13)}
-.files b{font-size:20px;font-weight:500;line-height:1.25}
+.files b{font-size:20px;font-weight:500;line-height:1.25;text-wrap:balance}
 .files span{font-size:14px;color:#A9BDB7}
 .docs .note{grid-column:1/13;margin-top:var(--s2);font-size:14px;color:#8FA6A0;position:relative}
 @media(max-width:767px){.docs .head,.facts,.files,.docs .note{grid-column:1/5}.facts{grid-template-columns:1fr;gap:var(--s4)}.files{grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--s2)}.files a{min-height:160px}.files b{font-size:16px}}
@@ -157,6 +157,23 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
 .cc a{padding:8px 16px;border-radius:999px;color:#A9BDB7}
 .cc a.on{background:#fff;color:#0F1F1C}
 @media(max-width:767px){.cc{font-size:13px}.cc a{padding:8px 12px}}
+
+/* варианты для выбора: ?h=a|b — цифры первого экрана, ?g=a|b — стеклянные карточки */
+html[data-h=b] .hero .wrap{text-align:left}
+html[data-h=b] .hero .lead{grid-column:1/7;grid-row:1}
+html[data-h=b] .hero .acts{grid-column:1/7;grid-row:2;justify-content:flex-start}
+html[data-h=b] .hero .tip{grid-column:1/7;grid-row:3}
+html[data-h=b] .hero .nums{grid-column:9/13;grid-row:1/4;align-self:end;margin-top:0;padding-top:0;border-top:0;grid-template-columns:1fr;gap:0}
+html[data-h=b] .hero .nums div{display:flex;justify-content:space-between;align-items:baseline;gap:var(--s2);padding:var(--s2) 0;border-top:1px solid var(--line)}
+html[data-h=b] .hero .nums b{font-size:28px}
+@media(max-width:767px){html[data-h=b] .hero .lead,html[data-h=b] .hero .acts,html[data-h=b] .hero .tip,html[data-h=b] .hero .nums{grid-column:1/5;grid-row:auto}html[data-h=b] .hero .nums{margin-top:var(--s4)}}
+html[data-g] .spec{background:none;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;border-radius:0;border-top:1px solid var(--line);padding:var(--s3) 0 0}
+html[data-g] .files a{background:none;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;border-radius:0;border-top:1px solid rgba(234,242,239,.24);padding:var(--s3) 0 0;min-height:0;gap:var(--s4)}
+html[data-g] .files a:hover{background:none;color:#fff}
+html[data-g] .files a:hover span{color:#EAF2EF}
+html[data-g=a] .wcard{background:var(--surf);backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:inset 0 0 0 1px var(--line)}
+html[data-g=b] .wcard{background:rgba(248,251,250,.58);backdrop-filter:blur(24px) saturate(1.2);-webkit-backdrop-filter:blur(24px) saturate(1.2);box-shadow:inset 0 0 0 1px rgba(255,255,255,.75),inset -3px 0 0 var(--edge)}
+html[data-g] .btn.ghost{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--surf)}
 </style>
 <script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 </head>
@@ -174,7 +191,7 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
   <h1 class="sr">Флоат-стекло Казахстана</h1>
   <div id="heroSpace"></div>
   <div class="wrap">
-    <p class="lead">Крупнейший завод в Центральной Азии. Продаём напрямую, без посредников</p>
+    <p class="lead">Крупнейший завод в Центральной Азии.<br>Продаём напрямую, без посредников</p>
     <div class="acts"><a class="btn" href="#join">Запросить прайс</a><a class="btn ghost" href="#pick">Подобрать стекло</a></div>
     <p class="tip" id="tip1">Подвигайте мышью — лист повернётся и преломит заголовок</p>
   </div>
@@ -240,7 +257,7 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
   <div class="files rv">
     <a href="#"><b>Паспорт качества</b><span>PDF</span></a>
     <a href="#"><b>Сертификаты соответствия</b><span>PDF</span></a>
-    <a href="#"><b>Техлист низко&shy;эмиссионного стекла</b><span>PDF</span></a>
+    <a href="#"><b>Техлист низкоэмиссионного стекла</b><span>PDF</span></a>
     <a href="#"><b>Каталог продукции</b><span>PDF</span></a>
   </div>
 </div></section>
@@ -267,6 +284,13 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
 
 <div class="cc"><a href="put.html">1 · Путь стекла</a><a class="on" href="list.html">2 · Лист</a></div>
 
+<script>
+(function(){const q=new URLSearchParams(location.search),h=q.get('h')||'b',g=q.get('g')||'b',r=document.documentElement;
+if(g==='a'||g==='b')r.dataset.g=g;
+if(h==='a'||h==='b'){r.dataset.h=h;const nums=document.querySelector('.hero .nums'),lead=document.querySelector('.hero .lead');
+  if(h==='a'){nums.parentNode.remove();lead.textContent='Крупнейший завод в Центральной Азии: 197 100 т стекла в год и покупатели в 9 странах. Продаём напрямую, без посредников'}
+  else{const w=nums.parentNode;document.querySelector('.hero .wrap').appendChild(nums);w.remove()}}})();
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
