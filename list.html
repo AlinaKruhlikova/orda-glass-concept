@@ -69,7 +69,7 @@ nav a:hover{color:var(--text)}
 .th label b{font-size:20px;color:var(--text);font-weight:600}
 .th input{width:100%;margin-top:var(--s2);accent-color:var(--acc);height:24px}
 .tip2{margin-top:var(--s2);font-size:14px;color:var(--muted);transition:opacity .4s}
-.spec{grid-column:7/13;align-self:end;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s2);font-size:14px;padding:var(--s3);border-radius:16px;background:rgba(248,251,250,.72);backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--line)}
+.spec{grid-column:8/13;align-self:end;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:var(--s2);font-size:14px;padding:var(--s3);border-radius:16px;background:rgba(248,251,250,.72);backdrop-filter:blur(14px);box-shadow:inset 0 0 0 1px var(--line)}
 .spec div{display:flex;flex-direction:column;gap:4px}
 .spec span{color:var(--muted)}
 .spec b{font-weight:600}
@@ -95,7 +95,7 @@ nav a:hover{color:var(--text)}
 /* кому — В */
 .who{background:var(--bg)}
 .who .left{grid-column:1/6;align-self:start;position:sticky;top:120px}
-.acc{grid-column:7/13;border-top:1px solid var(--line)}
+.acc{grid-column:8/13;border-top:1px solid var(--line)}
 .acc details{border-bottom:1px solid var(--line)}
 .acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:var(--s2);padding:var(--s3) 0;font-size:22px;font-weight:500;letter-spacing:-.01em}
 .acc summary::-webkit-details-marker{display:none}
@@ -139,7 +139,7 @@ nav a:hover{color:var(--text)}
 .paths b{font-size:20px;font-weight:600}
 .paths span{color:var(--muted)}
 .paths a:hover b{color:var(--acc)}
-.form{grid-column:7/13;background:var(--surf);border-radius:16px;padding:var(--s5);display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);box-shadow:inset 0 0 0 1px var(--line)}
+.form{grid-column:8/13;background:var(--surf);border-radius:16px;padding:var(--s5);display:grid;grid-template-columns:1fr 1fr;gap:var(--s3);box-shadow:inset 0 0 0 1px var(--line)}
 .form label{display:flex;flex-direction:column;gap:var(--s1);font-size:14px;color:var(--muted)}
 .form label.w{grid-column:1/3}
 .form input,.form select{height:48px;border-radius:8px;border:1px solid var(--line);background:#fff;padding:0 var(--s2);color:var(--text);font-size:16px}
@@ -149,7 +149,7 @@ nav a:hover{color:var(--text)}
 @media(max-width:767px){.join .left{grid-column:1/5}.form{grid-column:1/5;margin-top:var(--s4);padding:var(--s4) var(--s3);grid-template-columns:1fr}.form label.w,.form .btn,.form .c{grid-column:1}.form .c{flex-direction:column;gap:var(--s1)}}
 
 footer{background:var(--bg);padding:var(--s4) 0 104px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
-footer .wrap>div:nth-child(1){grid-column:1/4}footer .wrap>div:nth-child(2){grid-column:4/10}footer .wrap>div:nth-child(3){grid-column:10/13;text-align:right}
+footer .wrap>div:nth-child(1){grid-column:1/6}footer .wrap>div:nth-child(2){grid-column:8/13}
 footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(--s2)}
 @media(max-width:767px){footer .wrap>div{grid-column:1/5!important;text-align:left!important;margin-bottom:var(--s1)}}
 
@@ -159,7 +159,7 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
 @media(max-width:767px){.cc{font-size:13px}.cc a{padding:8px 12px}}
 
 /* варианты для выбора: ?h=a|b — цифры первого экрана, ?g=a|b — стеклянные карточки */
-html[data-h=b] .hero .wrap{text-align:left}
+html[data-h=b] .hero .wrap{text-align:left;width:100%}
 html[data-h=b] .hero .tip{grid-column:1/13;grid-row:1;margin:0 0 var(--s5);text-align:center}
 html[data-h=b] .hero .lead{grid-column:1/6;grid-row:2}
 html[data-h=b] .hero .acts{grid-column:1/6;grid-row:3;justify-content:flex-start}
@@ -290,9 +290,9 @@ html .docs .files a:hover{background:none;color:#fff}
 </div></section>
 </main>
 
-<footer><div class="wrap"><div>ТОО «Orda Glass Ltd»</div><div>Кызылординская область, с. Кызылжарма, урочище Башпай, стр. 11</div><div>RU · KZ · EN</div><div class="gen">Фото, форматы и документы — примеры для концепта. На сайте будут съёмка завода и данные из прайса</div></div></footer>
+<footer><div class="wrap"><div>ТОО «Orda Glass Ltd»</div><div>Кызылординская область, с. Кызылжарма, урочище Башпай, стр. 11</div><div class="gen">Фото, форматы и документы — примеры для концепта. На сайте будут съёмка завода и данные из прайса</div></div></footer>
 
-<div class="cc"><a href="put.html">1 · Путь стекла</a><a class="on" href="list.html">2 · Лист</a></div>
+<div class="cc"><a href="put.html">1 · Путь стекла</a><a class="on" href="list.html">2 · Лист</a><a href="obedinenie.html">3 · Лист → путь</a></div>
 
 <script>
 (function(){const q=new URLSearchParams(location.search),h=q.get('h')||'b',g=q.get('g')||'b',r=document.documentElement;
