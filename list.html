@@ -8,7 +8,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{background:var(--bg)}
 body{background:transparent;color:var(--text);font:400 16px/1.55 "Golos Text",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-p{text-wrap:pretty}@media(max-width:767px){p{text-wrap:balance}}
+p,li{text-wrap:pretty}@media(max-width:767px){p,li{text-wrap:balance}}
 a{color:inherit;text-decoration:none}
 button,input,select{font:inherit;color:inherit}
 button{background:none;border:0;cursor:pointer}
@@ -174,7 +174,7 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
   <h1 class="sr">Флоат-стекло Казахстана</h1>
   <div id="heroSpace"></div>
   <div class="wrap">
-    <p class="lead">Крупнейший завод в Центральной Азии: прозрачное, энергосберегающее и стекло с покрытием напрямую из Кызылорды</p>
+    <p class="lead">Крупнейший завод в Центральной Азии. Продаём напрямую, без посредников</p>
     <div class="acts"><a class="btn" href="#join">Запросить прайс</a><a class="btn ghost" href="#pick">Подобрать стекло</a></div>
     <p class="tip" id="tip1">Подвигайте мышью — лист повернётся и преломит заголовок</p>
   </div>
@@ -190,14 +190,13 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
 <section class="pick" id="pick"><div class="wrap">
   <div class="left rv">
     <h2 class="t">Подберите лист</h2>
-    <p class="sub">Всё о листе — до звонка менеджеру</p>
+    <p class="sub">Узнайте всё о листе до звонка менеджеру</p>
     <div class="tabs" id="tabs">
       <button class="on" data-k="0">Прозрачное <span>для закалки, стеклопакетов, мебели</span></button>
       <button data-k="1">Низкоэмиссионное <span>держит тепло в окнах</span></button>
       <button data-k="2">С покрытием <span>солнцезащитное, отражающее</span></button>
     </div>
     <div class="th"><label for="mm">Толщина <b id="mmv">6 мм</b></label><input type="range" id="mm" min="2" max="12" value="6" step="1"></div>
-    <p class="tip2" id="tip2">Выберите вид и потяните ползунок — лист справа изменится</p>
   </div>
   <div class="spec rv" id="spec">
     <div><span>Вид</span><b id="spV">Прозрачное</b></div>
@@ -205,13 +204,11 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
     <div><span>Формат</span><b>по запросу</b></div>
     <div><span>Документ</span><b>паспорт, PDF</b></div>
   </div>
-  <p class="spec-note">Пример карточки. Точный список толщин и форматов подставим из прайса завода</p>
 </div></section>
 
 <section class="where" id="where"><div class="pin" id="wpin"><div class="wrap">
   <div class="wcard">
     <h2 class="t">Где работает наше стекло</h2>
-    <p class="sub">За листом сменятся объекты</p>
     <ul class="wlist" id="wlist">
       <li class="on"><b>Окна и стеклопакеты</b><span>квартиры и дома</span></li>
       <li><b>Офисные перегородки</b><span>переговорные</span></li>
@@ -219,22 +216,21 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
       <li><b>Фасады</b><span>бизнес-центры, башни</span></li>
     </ul>
     <div class="wprog" id="wprog"><i></i></div>
-    <p class="wnote">Фото — иллюстрации для концепта. На сайте — объекты, где стоит стекло завода</p>
   </div>
 </div></div></section>
 
 <section class="who" id="who"><div class="wrap">
-  <div class="left rv"><h2 class="t">Кому мы продаём</h2><p class="sub">Откройте свой вариант — там всё для заказа</p></div>
+  <div class="left rv"><h2 class="t">Кому мы продаём</h2></div>
   <div class="acc rv">
-    <details open><summary>Переработчикам стекла</summary><div class="in"><p>Стабильный лист под закалку, стеклопакеты, триплекс и зеркала — напрямую с завода, без посредников.</p><ul><li>Толщины <span class="nw">2–12 мм</span></li><li>Отгрузка авто и <span class="nw">ж/д</span></li><li>Свой менеджер</li></ul><a href="#join">Запросить прайс →</a></div></details>
-    <details><summary>Оконным и фасадным компаниям</summary><div class="in"><p>Энергосберегающее и солнцезащитное стекло, сделанное в Казахстане, а не привезённое издалека.</p><ul><li>Паспорта качества</li><li>Образцы</li><li>Теплотехнические данные</li></ul><a href="#join">Запросить образцы →</a></div></details>
-    <details><summary>Застройщикам и проектировщикам</summary><div class="in"><p>Документы для проекта заранее и отечественное происхождение для местного содержания.</p><ul><li>Техлисты в PDF</li><li>Сертификаты</li><li>Объекты в Казахстане</li></ul><a href="#docs">Смотреть документы →</a></div></details>
-    <details><summary>Дилерам</summary><div class="in"><p>Продавайте стекло Orda Glass в своём регионе как официальный партнёр завода.</p><ul><li>Объёмы и скидки</li><li>География доставки</li><li>Поддержка менеджера</li></ul><a href="#join">Условия для дилеров →</a></div></details>
-    <details><summary>Покупателям из других стран</summary><div class="in"><p>Россия, Центральная Азия, Беларусь и страны Евросоюза уже покупают наше стекло.</p><ul><li>Экспортный отдел</li><li>Документы для таможни</li><li>Логистика до склада</li></ul><a href="#join">Написать в экспортный отдел →</a></div></details>
+    <details open><summary>Переработчикам стекла</summary><div class="in"><p>Стабильный лист под закалку, стеклопакеты, триплекс и зеркала напрямую с завода. Заказ ведёт менеджер завода.</p><ul><li>Толщины <span class="nw">2–12 мм</span></li><li>Отгрузка авто и <span class="nw">ж/д</span></li></ul><a href="#join">Запросить прайс →</a></div></details>
+    <details><summary>Оконным и фасадным компаниям</summary><div class="in"><p>Энергосберегающее и солнцезащитное стекло казахстанского производства, без долгой доставки из-за границы.</p><ul><li>Образцы для проверки</li><li>Паспорта качества и теплотехнические данные</li></ul><a href="#join">Запросить образцы →</a></div></details>
+    <details><summary>Застройщикам и проектировщикам</summary><div class="in"><p>Документы для проекта заранее и отечественное происхождение для местного содержания.</p><ul><li>Техлисты в PDF</li><li>Сертификаты соответствия</li><li>Паспорта качества</li><li>Объекты в Казахстане</li></ul><a href="#docs">Смотреть документы →</a></div></details>
+    <details><summary>Дилерам</summary><div class="in"><p>Продавайте стекло Orda Glass в своём регионе как официальный партнёр завода.</p><ul><li>Условия по объёмам и скидкам</li><li>Доставка в ваш регион</li></ul><a href="#join">Условия для дилеров →</a></div></details>
+    <details><summary>Покупателям из других стран</summary><div class="in"><p>Россия, Центральная Азия, Беларусь и страны Евросоюза уже покупают наше стекло.</p><ul><li>Документы для таможни</li><li>Логистика до вашего склада</li></ul><a href="#join">Написать в экспортный отдел →</a></div></details>
   </div>
 </div></section>
 
-<section class="docs" id="docs"><i class="blob b1"></i><i class="blob b2"></i><div class="wrap">
+<section class="docs" id="docs"><div class="wrap">
   <div class="head rv"><h2 class="t">Прозрачный завод</h2><p class="sub">Открытые цифры и документы для скачивания</p></div>
   <div class="facts rv">
     <div><b>72 → 95 тыс. т</b><p>рост экспорта за два года</p><small>2023 → 2025 · <a href="https://bizmedia.kz/2026-02-17-pochti-tret-produkczii-zavoda-ordaglass-ltd-idet-na-eksport-v-9-stran/">Bizmedia.kz</a></small></div>
@@ -247,7 +243,6 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
     <a href="#"><b>Техлист низко&shy;эмиссионного стекла</b><span>PDF</span></a>
     <a href="#"><b>Каталог продукции</b><span>PDF</span></a>
   </div>
-  <p class="note">Названия документов — пример, список уточним у завода</p>
 </div></section>
 
 <section class="join" id="join"><div class="wrap">
@@ -268,7 +263,7 @@ footer .gen{grid-column:1/13!important;text-align:left!important;margin-top:var(
 </div></section>
 </main>
 
-<footer><div class="wrap"><div>ТОО «Orda Glass Ltd»</div><div>Кызылординская область, с. Кызылжарма, урочище Башпай, стр. 11</div><div>RU · KZ · EN</div><div class="gen">Фото — иллюстрации, сгенерированы для концепта. На сайте будет съёмка завода</div></div></footer>
+<footer><div class="wrap"><div>ТОО «Orda Glass Ltd»</div><div>Кызылординская область, с. Кызылжарма, урочище Башпай, стр. 11</div><div>RU · KZ · EN</div><div class="gen">Фото, форматы и документы — примеры для концепта. На сайте будут съёмка завода и данные из прайса</div></div></footer>
 
 <div class="cc"><a href="put.html">1 · Путь стекла</a><a class="on" href="list.html">2 · Лист</a></div>
 
@@ -375,7 +370,7 @@ addEventListener('resize',()=>{layout();refreshA()});
 /* подбор */
 const tabs=[...document.querySelectorAll('#tabs button')],range=document.getElementById('mm'),tip2=document.getElementById('tip2');
 const NAMES=['Прозрачное','Низкоэмиссионное','С покрытием'];
-tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(x=>x.classList.toggle('on',x===b));const k=+b.dataset.k;setType(k);document.getElementById('spV').textContent=NAMES[k];tip2.style.opacity=0}));
-range.addEventListener('input',()=>{mm=+range.value;tz=mm/6;document.getElementById('mmv').textContent=mm+' мм';document.getElementById('spT').textContent=mm+' мм';tip2.style.opacity=0});
+tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(x=>x.classList.toggle('on',x===b));const k=+b.dataset.k;setType(k);document.getElementById('spV').textContent=NAMES[k];tip2&&(tip2.style.opacity=0)}));
+range.addEventListener('input',()=>{mm=+range.value;tz=mm/6;document.getElementById('mmv').textContent=mm+' мм';document.getElementById('spT').textContent=mm+' мм';tip2&&(tip2.style.opacity=0)});
 </script>
 </body></html>

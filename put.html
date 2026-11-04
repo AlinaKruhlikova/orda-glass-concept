@@ -8,7 +8,7 @@
 *{box-sizing:border-box;margin:0;padding:0}
 html{background:var(--bg)}
 body{background:var(--bg);color:var(--text);font:400 16px/1.55 "Golos Text",sans-serif;-webkit-font-smoothing:antialiased}
-p{text-wrap:pretty}@media(max-width:767px){p{text-wrap:balance}}
+p,li{text-wrap:pretty}@media(max-width:767px){p,li{text-wrap:balance}}
 a{color:inherit;text-decoration:none}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .wrap{max-width:1440px;margin:0 auto;padding:0 80px;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));column-gap:24px}
@@ -175,11 +175,11 @@ footer .wrap>div:nth-child(1){grid-column:1/4}footer .wrap>div:nth-child(2){grid
   <div class="stage"><div class="wrap">
     <div class="steps" id="steps">
       <div class="step"><div class="n">01 / 06</div><h2 class="oz">Сырьё</h2><p>Кварцевый песок, сода и доломит. Из этой смеси завод варит стекло каждый день</p><div class="fig"><b>600 т</b><span>стекла в сутки</span></div></div>
-      <div class="step"><div class="n">02 / 06</div><h2 class="oz">Печь</h2><p>Смесь плавится примерно при 1&nbsp;500&nbsp;°C. Печь флоат-линии не останавливают годами, поэтому поставки идут без перерывов</p><div class="fig"><b>24/7</b><span>печь работает круглосуточно</span></div></div>
+      <div class="step"><div class="n">02 / 06</div><h2 class="oz">Печь</h2><p>Смесь плавится примерно при 1&nbsp;500&nbsp;°C. Печь флоат-линии не гасят годами</p><div class="fig"><b>24/7</b><span>печь работает круглосуточно</span></div></div>
       <div class="step"><div class="n">03 / 06</div><h2 class="oz">Олово</h2><p>Расплав растекается по ванне с жидким оловом. Так получается ровная гладкая поверхность без шлифовки</p><div class="fig"><b>2–12 мм</b><span>толщина листа</span></div></div>
       <div class="step"><div class="n">04 / 06</div><h2 class="oz">Резка</h2><p>Ленту медленно остужают, проверяют и режут на листы нужного формата</p><div class="fig"><b>197&nbsp;100 т</b><span>стекла в год</span></div></div>
       <div class="step"><div class="n">05 / 06</div><h2 class="oz">Отгрузка</h2><p>70&nbsp;% стекла остаётся в Казахстане, 30&nbsp;% уходит в Россию, Центральную Азию и Европу</p><div class="fig"><b>9 стран</b><span>покупают наше стекло</span></div></div>
-      <div class="step"><div class="n">06 / 06</div><h2 class="oz">Фасад</h2><p>Стекло встаёт в окна, витрины и фасады. Половина стекла в стране теперь своя, а не привозная</p><div class="fig"><b>50&nbsp;%</b><span>стекла в стране — местное</span></div><a class="btn" href="#join">Запросить прайс</a></div>
+      <div class="step"><div class="n">06 / 06</div><h2 class="oz">Фасад</h2><p>Стекло встаёт в окна, витрины и фасады. Подберём лист под ваш объект</p><a class="btn" href="#join">Запросить прайс</a></div>
     </div>
   </div></div>
   <div class="hint" id="hint"><i></i>Листайте вниз: пройдёте путь стекла от песка до фасада</div>
@@ -197,7 +197,6 @@ footer .wrap>div:nth-child(1){grid-column:1/4}footer .wrap>div:nth-child(2){grid
     <li><button data-i="3">Хочу продавать стекло в регионе</button></li>
     <li><button data-i="4">Закупаю для другой страны</button></li>
   </ul>
-  <p class="tip" id="sitTip">Выберите свою задачу — справа появится, что даст завод</p>
   <div class="ans rv" id="ans"></div>
 </div></section>
 
@@ -208,11 +207,10 @@ footer .wrap>div:nth-child(1){grid-column:1/4}footer .wrap>div:nth-child(2){grid
     <div class="card"><div class="sw"><i style="--g:linear-gradient(135deg,rgba(214,222,240,.55),rgba(150,160,205,.25));--e:#7E8CC4"></i></div><div class="tx"><h3>Низкоэмиссионное</h3><p>Энергосберегающее стекло для окон: держит тепло зимой. Своя линия на 5 млн м² в год</p><a href="#">Характеристики и PDF →</a></div></div>
     <div class="card"><div class="sw"><i style="--g:linear-gradient(135deg,rgba(200,180,150,.6),rgba(120,100,80,.35));--e:#A88A60"></i></div><div class="tx"><h3>С покрытием</h3><p>Солнцезащитное и отражающее стекло для фасадов и витрин</p><a href="#">Характеристики и PDF →</a></div></div>
   </div>
-  <p class="note">Листы нарисованы кодом — заменим на фото продукции завода</p>
 </div></section>
 
 <section class="proof" id="proof"><div class="wrap">
-  <div class="head rv"><h2 class="t oz">Цифры, которые можно проверить</h2><p class="sub">У каждой цифры — открытый источник</p></div>
+  <div class="head rv"><h2 class="t oz">Цифры, которые можно проверить</h2></div>
   <div class="rows rv" id="rows">
     <div class="row"><div class="k"><span>Экспорт, тыс. т</span><b>72 → <em>95</em></b></div><div class="bars"><div style="--w:75.8%"></div><div style="--w:100%"></div></div><div class="src">2023 → 2025 · <a href="https://bizmedia.kz/2026-02-17-pochti-tret-produkczii-zavoda-ordaglass-ltd-idet-na-eksport-v-9-stran/">Bizmedia.kz, 2026</a></div></div>
     <div class="row"><div class="k"><span>Своё стекло в Казахстане</span><b>32,4 → <em>50,2 %</em></b></div><div class="bars"><div style="--w:32.4%"></div><div style="--w:50.2%"></div></div><div class="src">2023 → 2025 · <a href="https://www.gov.kz/memleket/entities/mps/press/news/details/1026186?lang=ru">Правительство РК, 2025</a></div></div>
@@ -221,7 +219,7 @@ footer .wrap>div:nth-child(1){grid-column:1/4}footer .wrap>div:nth-child(2){grid
 </div></section>
 
 <section class="join" id="join"><img class="jw" src="img/worker.webp" alt="Сотрудник завода держит лист стекла"><canvas id="ribbon" aria-hidden="true"></canvas><div class="wrap">
-  <div class="head rv"><h2 class="t oz">Станьте частью Orda&nbsp;Glass</h2><p class="sub">Покупайте, продавайте или работайте вместе с заводом</p></div>
+  <div class="head rv"><h2 class="t oz">Станьте частью Orda&nbsp;Glass</h2></div>
   <div class="paths rv">
     <a href="#"><b>Покупать напрямую</b><span>Без посредников, с менеджером завода. Отгрузка авто и <span class="nw">ж/д</span></span><em>Запросить прайс →</em></a>
     <a href="#"><b>Стать дилером</b><span>Продавайте стекло Orda Glass в своём регионе или стране</span><em>Условия для дилеров →</em></a>
@@ -230,7 +228,7 @@ footer .wrap>div:nth-child(1){grid-column:1/4}footer .wrap>div:nth-child(2){grid
   <div class="contacts rv"><a href="tel:+77242402179">+7 (7242) 40-21-79</a><a href="mailto:xsc@ordaglass.kz">xsc@ordaglass.kz</a></div>
 </div></section>
 
-<footer><div class="wrap"><div>ТОО «Orda Glass Ltd»</div><div>Кызылординская область, с. Кызылжарма, урочище Башпай, стр. 11</div><div>RU · KZ · EN</div><div class="gen">Фото — иллюстрации, сгенерированы для концепта. На сайте будет съёмка завода</div></div></footer>
+<footer><div class="wrap"><div>ТОО «Orda Glass Ltd»</div><div>Кызылординская область, с. Кызылжарма, урочище Башпай, стр. 11</div><div>RU · KZ · EN</div><div class="gen">Фото и листы стекла — иллюстрации для концепта. На сайте будет съёмка завода и продукции</div></div></footer>
 
 <div class="cc"><a class="on" href="put.html">1 · Путь стекла</a><a href="list.html">2 · Лист</a></div>
 
@@ -325,15 +323,15 @@ requestAnimationFrame(frame);
 
 /* ---------- ситуации ---------- */
 const SIT=[
- ['Переработчикам','Стабильный лист под закалку, стеклопакеты и триплекс','Прямые поставки с завода, без посредников и перебоев.',['Толщины 2–12 мм','Отгрузка авто и <span class=nw>ж/д</span>','Свой менеджер на заводе'],'Запросить прайс'],
- ['Оконным и фасадным компаниям','Энергосберегающее стекло, сделанное в Казахстане','Низкоэмиссионное и солнцезащитное стекло без долгой дороги из-за границы.',['Паспорта качества','Образцы для проверки','Теплотехнические характеристики'],'Запросить образцы'],
- ['Застройщикам и проектировщикам','Документы для проекта — заранее','Отечественное стекло для местного содержания в госзаказе.',['Техлисты в PDF','Сертификаты','Объекты, где стоит наше стекло'],'Скачать техлисты'],
- ['Дилерам','Стекло Orda Glass в вашем регионе','Становитесь официальным партнёром завода.',['Объёмы и скидки','География доставки','Поддержка менеджера'],'Условия для дилеров'],
- ['Покупателям из других стран','Отгружаем в 9 стран','Россия, Центральная Азия, Беларусь и страны Евросоюза.',['Экспортный отдел','Документы для таможни','Логистика до вашего склада'],'Написать в экспортный отдел']];
+ ['Переработчикам','Стабильный лист под закалку, стеклопакеты и триплекс','Покупаете напрямую у завода, без посредников. Заказ ведёт менеджер завода.',['Толщины 2–12 мм','Отгрузка авто и <span class=nw>ж/д</span>'],'Запросить прайс'],
+ ['Оконным и фасадным компаниям','Энергосберегающее стекло казахстанского производства','Низкоэмиссионное и солнцезащитное стекло без долгой доставки из-за границы.',['Образцы для проверки','Паспорта качества и теплотехнические характеристики'],'Запросить образцы'],
+ ['Застройщикам и проектировщикам','Документы для проекта заранее','Отечественное стекло для местного содержания в госзаказе.',['Техлисты в PDF','Сертификаты соответствия','Паспорта качества','Объекты, где стоит наше стекло'],'Скачать техлисты'],
+ ['Дилерам','Стекло Orda Glass в вашем регионе','Станьте официальным партнёром завода.',['Условия по объёмам и скидкам','Доставка в ваш регион'],'Условия для дилеров'],
+ ['Покупателям из других стран','Экспорт с документами для таможни','Заказы из-за рубежа ведёт экспортный отдел.',['Документы для таможни','Логистика до вашего склада'],'Написать в экспортный отдел']];
 const ans=document.getElementById('ans'),tip=document.getElementById('sitTip');
 function showSit(i){const s=SIT[i];ans.innerHTML=`<div class="body"><div class="who">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p><ul>${s[3].map(x=>`<li>${x}</li>`).join('')}</ul></div><a class="btn" href="#join">${s[4]}</a>`;typo(ans)}
 showSit(0);
-document.querySelectorAll('#sitList button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#sitList button').forEach(x=>x.classList.toggle('on',x===b));showSit(+b.dataset.i);tip.style.opacity=0;if(!reduce)gsap.fromTo(ans.querySelector('.body'),{opacity:0,y:16},{opacity:1,y:0,duration:.5,ease:'power3.out'})}));
+document.querySelectorAll('#sitList button').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('#sitList button').forEach(x=>x.classList.toggle('on',x===b));showSit(+b.dataset.i);tip&&(tip.style.opacity=0);if(!reduce)gsap.fromTo(ans.querySelector('.body'),{opacity:0,y:16},{opacity:1,y:0,duration:.5,ease:'power3.out'})}));
 
 /* ---------- появление ---------- */
 gsap.utils.toArray('.rv').forEach(el=>{if(reduce)return;gsap.to(el,{opacity:1,y:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 85%'}})});
