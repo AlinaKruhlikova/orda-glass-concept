@@ -354,6 +354,7 @@ function stateAt(i){const m=mob();
   if(i===3)return{x:m?.5:.7,y:m?.36:.5,w:m?.8:.42,ry:.35+Math.PI*2,rx:-.04,rz:0};
   return{x:1.25,y:.4,w:.3,ry:.6+Math.PI*2,rx:.1,rz:0}}
 let mx=0,my=0,tx=0,ty=0,used=false;
+if(matchMedia('(hover: none), (pointer: coarse)').matches||navigator.maxTouchPoints>0)document.getElementById('tip1').textContent='Проведите пальцем — лист повернётся и преломит заголовок';
 addEventListener('pointermove',e=>{mx=e.clientX/innerWidth-.5;my=e.clientY/innerHeight-.5;if(!used&&Math.abs(mx)+Math.abs(my)>.15){used=true;document.getElementById('tip1').style.opacity=0}},{passive:true});
 function toWorld(px,py){const vh=2*Math.tan(THREE.MathUtils.degToRad(17.5))*6;return[(px-.5)*vh*cam.aspect,-(py-.5)*vh,vh]}
 function tick(t){
